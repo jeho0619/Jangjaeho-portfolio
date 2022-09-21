@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울시청년활동지원센터</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        mobile_menu();
+    });
+    
+    function mobile_menu(){
+        /* 변수 선언 */
+        var $menu = null;
+        var $left_gnb = null; // 영역 전체
+        var $depth1_wrap = null;
+        var $depth1 = null;
+        var $depth1_btn = null;
+        
+        /* 시작 함수 */
+        function start(){
+            init();
+            init_event();
+        }
+        /* 변수 초기화 함수 */
+        function init(){
+            $menu = $('.menu_btn');
+            $left_gnb = $('.left_gnbWrap'); // 영역 전체
+            $depth1_wrap = $('.left_gnb>li');
+            $depth1 = $depth1_wrap.children('ul');
+            $depth1_btn = $depth1_wrap.children('a');
+        }
+        /* 이벤트 함수 */
+        function init_event(){
+            
+            /* 모바일 메뉴 버튼 클릭했을때 모바일 메뉴영역 나오게 하기 */
+            $menu.click(function(event){
+                event.preventDefault();
+                $left_gnb.addClass('on');
+            });
+            
+            /* x버튼 눌렀을때 모바일 메뉴 닫기 */
+            $('.close').click(function(event){
+                event.preventDefault();
+    
+                $left_gnb.removeClass('on');
+                
+                // x버튼 누르면 시간차 약간두고 소메뉴 닫히게 하기
+                setTimeout(function(){
+                    $depth1_btn.removeClass('on');
+                    $depth1.slideUp();
+                },300)
+            });
+            
+            /* depth1의 각메뉴 클릭시 depth2 나오게 하기 */
+            $depth1_btn.click(function(event){
+                event.preventDefault();
+                var $this = $(this);
+                var $this_ul = $this.siblings('ul');
+    
+                var check = $this.hasClass('on');
+                if(check){
+                    $this.removeClass('on');
+                    $this_ul.stop(true,true).slideUp();
+                }else{
+                    $depth1_btn.removeClass('on');
+                    $depth1.stop().slideUp();
+                    $this.addClass('on');
+                    $this_ul.stop(true,true).slideDown();
+                }
+            });
+            
+            /* 디바이스 크기 변경시 모바일 메뉴영역 숨기기 */
+            $(window).resize(function(){
+                $left_gnb.removeClass('on');
+            });
+        }
+        
+        start(); // 시작 호출
+    }
+    </script> 
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <ul class="sns">
+                <li><img src="img/blog.png"></li>
+                <li><img src="img/youtube.png"></li>
+                <li><img src="img/facebook.png"></li>
+                <li><img src="img/instagram.png"></li>
+                <!-- 초기화 -->
+            </ul>
+            <img style="cursor: pointer;" onclick="location.href='index.html';" class="logo" src="img/logo.png" alt="서울시청년활동지원센터">
+            <div>
+                <div class="login">log in</div>
+                <div class="signup">회원가입</div>
+                <ul class="menu_btn" style="cursor: pointer;">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <nav class="left_gnbWrap">
+                    <a href="#" class="close">close</a>
+                    <ul class="left_gnb">
+                        <li>
+                            <a href="#">센터소개</a>
+                            <ul>
+                                <li><a href="sub1.html">센터는</a></li>
+                                <li><a href="sub1.html">사업소개</a></li>
+                                <li><a href="sub1.html">연혁</a></li>
+                                <li><a href="sub1.html">조직도</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">센터소식</a>
+                            <ul>
+                                <li><a href="sub1.html">공지사항</a></li>
+                                <li><a href="sub1.html">1934 뉴스레터</a></li>
+                                <li><a href="sub1.html">발간자료</a></li>
+                                <li><a href="sub1.html">자주 묻는 질문</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">프로그램</a>
+                            <ul>
+                                <li><a href="sub1.html">프로그램 안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">청년정보</a>
+                            <ul>
+                                <li><a href="sub1.html">청년포털게시판</a></li>
+                                <li><a href="sub1.html">정보퐁퐁</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- 초기화 -->
+            </div>
+            <!-- 초기화 -->
+        </div>
+        <div id="mainimg">
+            <div class="inner">
+                <h1>청년이
+                    <br><span>존중받는</span>
+                    <br>사회를 만듭니다.
+                </h1>
+            </div>
+        </div>
+        <div id="explain">
+            <h1>서울시청년활동지원센터는</h1>
+            <p>서울시청년활동지원센터는 서울 청년들의 사회 진입 과정을
+                <br>지원합니다. 청년의 사회출발 지원, 마음건강 지원, 지역별
+                <br>청년센터 운영지원 등 청년들의 사회진입을 지원하는 사업을
+                <br>서울시로부터 위탁 받아 운영하고 있습니다.</p>
+            <div>센터소개</div>
+        </div>
+        <div id="contents">
+            <div class="box1">
+                <div class="inner">
+                    <h2>센터 지원 프로그램</h2>
+                    <div>
+                        <div>
+                            <p>YC운영지원 사업</p>
+                            <div></div>
+                            <h3>2022 서울 청년 정책제안단 모집</h3>
+                            <h3>2022 서울 청년 정책제안단 모집</h3>
+                            <img src="img/box1_1.jpg">
+                            <img src="tabimg/box1_1.jpg">
+                            <img src="mobimg/box1_1.jpg">
+                        </div>
+                        <div>
+                            <p>YC운영지원 사업</p>
+                            <div></div>
+                            <h3>2022년 생활안전지원사업 
+                                <br>[영케어러케어링] 1차 지원사업</h3>
+                            <h3>2022년 [영케어러케어링] 지원사업</h3>
+                            <img src="img/box1_2.jpg">
+                            <img src="tabimg/box1_2.jpg">
+                            <img src="mobimg/box1_2.jpg">
+                        </div>
+                        <div>
+                            <p>사회참여 지원사업</p>
+                            <div></div>
+                            <h3>[취준설명서: 2022년 취업도전을
+                                <br>위한 나만의 전략세우기]</h3>
+                            <h3>취준설명서: 나만의 전략세우기</h3>
+                            <img src="img/box1_3.jpg">
+                            <img src="tabimg/box1_3.jpg">
+                            <img src="mobimg/box1_3.jpg">
+                        </div>
+                        <!-- 초기화 -->
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="inner">
+                    <h2>센터 소셜미디어</h2>
+                    <div>
+                        <div class="box2_1">
+                            <div class="box_top">
+                                <div>블로그</div>
+                                <img class="girl" src="img/girl.png">
+                            </div>
+                            <div class="box_bottom">
+                                <div>페이스북</div>
+                            </div>
+                        </div>
+                        <div class="box2_2">
+                            <div>인스타그램</div>
+                        </div>
+                        <div class="box2_3">
+                            <div>인스타그램</div>
+                            <img class="boy" src="img/boy.png">
+                        </div>
+                        <!-- 초기화 -->
+                    </div>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="inner">
+                    <div>
+                        <div class="box3_left">
+                            <h2>센터 방문신청</h2>
+                            <p>서울시청년활동지원센터 방문을 원하시는 
+                                <br>분들은 신청서를 제출해주세요.</p>
+                            <div>신청하러 가기</div>
+                            <div><img src="tabimg/btn1.jpg"></div>
+                            <p>신청하러가기</p>
+                            <div></div>
+                        </div>
+                        <div class="box3_right">
+                            <h2>뉴스레터 신청</h2>
+                            <p>청년지원 정보 및 프로그램 등
+                                <br>다양한 소식을 전해드립니다</p>
+                            <div>신청하러 가기</div>
+                            <div><img src="tabimg/btn2.jpg"></div>
+                            <p>신청하러가기</p>
+                            <div></div>
+                        </div>
+                    <!-- 초기화 -->
+                    </div>
+                    <div><img src="img/top.png"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="inner">
+                <p class="copyright">주소 : 서울특별시 은평구 통일로 684, 21동 2층 우) 03371 / 684 Tongil-ro, Enpyeong-gu, Seoul, Korea
+                    <br>전화 : 02-6358-0607	이메일 : sygc@sygc.kr
+                    <br>상호명 : 서울시청년활동지원센터
+                    <br>Copyright ⓒ Seoul Youth Guarantee All Rights Reserved.</p>
+                <p class="copyright2">주소 : 서울특별시 은평구 통일로 684, 21동 2층 우)
+                    <br>03371 / 684 Tongil-ro, Enpyeong-gu, Seoul, Korea
+                    <br>전화 : 02-6358-0607	이메일 : sygc@sygc.kr
+                    <br>상호명 : 서울시청년활동지원센터
+                    <br>Copyright ⓒ Seoul Youth Guarantee All Rights Reserved.</p>
+                <img class="footer_logo" src="img/f_logo.png">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

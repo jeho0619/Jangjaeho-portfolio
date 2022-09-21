@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="css/style_.css" rel="stylesheet">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.poptrox.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script>
+        $(window).on('load', function () {
+            $(".loading_").fadeOut();
+            $("#preloder").delay(100).fadeOut("slow");
+        });
+    </script>
+    <script src="js/script_.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/skill.js"></script>
+    <script src="js/accordion.js"></script>
+    <style>
+        #preloder {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999999;
+            background: #fff;
+        }
+
+        .loading_ {
+            width: 231px;
+            height: 231px;
+            background-image: url(loading_03.jpg);
+            animation: rotate_image 3s linear infinite;
+            position: absolute;
+            top: 35%;
+            left: 0%;
+            right: 0;
+            margin: 0 auto;
+            margin: auto;
+            z-index: 10;
+        }
+
+        @keyframes rotate_image {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloder">
+        <div class="loading_"></div>
+    </div>
+    <!-- 원형 레이아웃 구현 -->
+    <div id="main">
+        <img class="logo" src="img/logo.png" alt="DesignerJang">
+        <p style="margin-left: 30px; line-height: 120%; font-size: 12px;">이 레이아웃은 1920X1080 화면에
+            <br>최적화되어있습니다.
+        </p>
+        <!-- <h1 class="int">
+            <div class="i1">
+                <span>I<a href="#content1" class="pointer"></a></span>
+                <span>N<a href="#content1" class="pointer"></a></span>
+                <span>T<a href="#content1" class="pointer"></a></span>
+                <span>R<a href="#content1" class="pointer"></a></span>
+                <span>O<a href="#content1" class="pointer"></a></span>
+                <span>D<a href="#content1" class="pointer"></a></span>
+                <span>U<a href="#content1" class="pointer"></a></span>
+                <span>C<a href="#content1" class="pointer"></a></span>
+                <span>E<a href="#content1" class="pointer"></a></span>
+            </div>
+            <div class="i2">
+                <span>P<a href="#content2" class="pointer"></a></span>
+                <span>O<a href="#content2" class="pointer"></a></span>
+                <span>S<a href="#content2" class="pointer"></a></span>
+                <span>S<a href="#content2" class="pointer"></a></span>
+                <span>I<a href="#content2" class="pointer"></a></span>
+                <span>B<a href="#content2" class="pointer"></a></span>
+                <span>L<a href="#content2" class="pointer"></a></span>
+                <span>E<a href="#content2" class="pointer"></a></span>
+                <span>W<a href="#content2" class="pointer"></a></span>
+                <span>O<a href="#content2" class="pointer"></a></span>
+                <span>R<a href="#content2" class="pointer"></a></span>
+                <span>K<a href="#content2" class="pointer"></a></span>
+                <span>S<a href="#content2" class="pointer"></a></span>
+            </div>
+            <div class="i3">
+                <span>M<a href="#content3" class="pointer"></a></span>
+                <span>Y<a href="#content3" class="pointer"></a></span>
+                <span>W<a href="#content3" class="pointer"></a></span>
+                <span>O<a href="#content3" class="pointer"></a></span>
+                <span>R<a href="#content3" class="pointer"></a></span>
+                <span>K<a href="#content3" class="pointer"></a></span>
+                <span>S<a href="#content3" class="pointer"></a></span>
+            </div>
+        </h1> -->
+        <div class="int_menu">
+            <div class="menu1">
+                <a href="#content1" class="pointer"></a>
+                <a href="#content1" class="pointer"></a>
+                <a href="#content1" class="pointer"></a>
+                <img class="i1_img" src="img/menu1.png">
+            </div>
+            <div class="menu2">
+                <a href="#content2" class="pointer"></a>
+                <a href="#content2" class="pointer"></a>
+                <a href="#content2" class="pointer"></a>
+                <a href="#content2" class="pointer"></a>
+                <a href="#content2" class="pointer"></a>
+                <img class="i2_img" src="img/menu2.png">
+            </div>
+            <div class="menu3">
+                <a href="#content3" class="pointer"></a>
+                <a href="#content3" class="pointer"></a>
+                <a href="#content3" class="pointer"></a>
+                <img class="i3_img" src="img/menu3.png">
+            </div>
+        </div>
+        <h1 class="int_mob">
+            <span><a class="pointer" href="#content1">INTRODUCE</a></span>
+            <br><span><a class="pointer" href="#content2">POSSIBLE WORKS</a></span>
+            <br><span><a class="pointer" href="#content3">MY WORKS</a></span>
+        </h1>
+        <div class="circle c1">
+            <p>자기소개</p>
+            <p>INTRODUCE</p>
+        </div>
+        <div class="circle c2">
+            <p>가능업무</p>
+            <p>POSSIBLE WORKS</p>
+        </div>
+        <div class="circle c3">
+            <p>나의작업</p>
+            <p>MY WORKS</p>
+        </div>
+        
+    </div>
+    <div id="content1">
+        <div class="left_box">
+            <div class="box_inner">
+                <h1>Who I am</h1>
+                <div class="name">
+                    <p>Name(age)</p>
+                    <p>장재호(26)</p>
+                </div>
+                <div class="edu">
+                    <p>Education</p>
+                    <p>부경대학교 고분자공학과 졸업
+                        <br><span>센텀직업전문학교 반응형 웹디자인 과정 수료</span>
+                    </p>
+                </div>
+                <div class="cer">
+                    <p>Certificate</p>
+                    <p>웹디자인기능사
+                        <br><span>컴퓨터그래픽스운용기능사</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right_content">
+            <div class="content_inner">
+                <h1>Objective</h1>
+                <p>예전부터 웹 서핑이 취미라 다양한 형태의 웹 디자인을 접해오며 디자인에 대한 관심을 가졌습니다.</p>
+                <p>선생님과 시니어 디자이너들의 디자인들을 학원이나 유튜브 등을 통해서 끊임없이 학습하며
+                    <br><span>저에게 부족한 부분을 채워나갈 때, 제가 배워야 할 점이 무엇인지 깨달을 수 있어 너무나도 기뻤습니다.</span>
+                </p>
+                <p>현재는 플랫디자인에 관심이 많아 해당 디자인에 어울리는 타이포 강약과 색감 등을 공부하고 있습니다.</p>
+                <p>단순히 아름다움만을 추구하는 1차원적인 디자이너가 아니라 항상 <strong>모든 사용자의 접근성을 높일 수 있는</strong>
+                    <br><span>디자인을 만들 수 있는 디자이너가 되기 위해 노력하겠습니다.</span>
+                </p>
+                <h1>Skills</h1>
+                <div class="skills">
+                    <div class="skill ps">
+                        <div class="skill_wrap ps_wrap"></div>
+                        <img src="img/95%.png">
+                        <div class="text">
+                            <img src="img/ps.png">
+                            <p>Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="skill ai">
+                        <div class="skill_wrap ps_wrap"></div>
+                        <img src="img/95%.png">
+                        <div class="text">
+                            <img src="img/ai.png">
+                            <p>Illustrator</p>
+                        </div>
+                    </div>
+                    <div class="skill xd">
+                        <div class="skill_wrap ps_wrap"></div>
+                        <img src="img/70%.png">
+                        <div class="text">
+                            <img src="img/xd.png">
+                            <p>Adobe Xd</p>
+                        </div>
+                    </div>
+                    <div class="skill html">
+                        <div class="skill_wrap ps_wrap"></div>
+                        <img src="img/MAX.png">
+                        <div class="text">
+                            <img src="img/html.png">
+                            <p>Html & Css</p>
+                        </div>
+                    </div>
+                    <div class="skill jq">
+                        <div class="skill_wrap ps_wrap"></div>
+                        <img src="img/60%.png">
+                        <div class="text">
+                            <img src="img/jq.png">
+                            <p>jQuery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#content2" class="arrow_down pointer">
+            <img src="img/arrow_down.png">
+            <img src="img/arrow_down_hover.png">
+        </a>
+    </div>
+    <div id="content2">
+        <h1>Possible works</h1>
+        <div class="container">
+            <div class="box_top">
+                <div class="top_left">
+                    <p>웹 디자인 및 퍼블리싱</p>
+                </div>
+                <div class="top_right">
+                    <p>일러스트 및 이미지 편집</p>
+                </div>
+            </div>
+            <div class="box_middle">
+                <div class="middle_left">
+                    <p>CI, BI 컨셉 가이드 제작</p>
+                </div>
+                <div class="middle_right">
+                    <p>리플렛, 광고물 제작</p>
+                </div>
+            </div>
+            <div class="box_bottom">
+                <div class="bottom_left">
+                    <p>UI 디자인 프로세스</p>
+                </div>
+                <div class="bottom_right">
+                    <p>카드뉴스 및 배너 제작</p>
+                </div>
+            </div>
+        </div>
+        <a href="#content3" class="arrow_down pointer">
+            <img src="img/arrow_down.png">
+            <img src="img/arrow_down_hover.png">
+        </a>
+    </div>
+    <div id="content3">
+        <div id="al_bottom"></div>
+        <h1>Web project</h1>
+        <div class="arrow_left">
+            <img src="img/arrow_left.png">
+            <img src="img/arrow_left_hover.png">
+        </div>
+        <div class="bg">
+            <ul class="move">
+                <li><img src="img/aboutgoogle.jpg">
+                    <div>
+                        <p>About Google</p>
+                        <a></a>
+                        <a></a>
+                        <a href="sub1.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                    </div>
+                </li>
+                <li><img src="img/서울시청년활동지원센터.jpg">
+                    <div>
+                        <p>서울시청년활동지원센터</p>
+                        <a href="sub2.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a href="web2/index.html" target="_blank">
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </li>
+                <li><img src="img/스마트스토어.jpg">
+                    <div>
+                        <p>스마트스토어</p>
+                        <a href="sub3.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a href="https://smartstore.naver.com/liquorice" target="_blank">
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </li>
+                <li><img src="img/EnterpriseBlockchain.jpg">
+                    <div>
+                        <p>EnterpriseBlockchain</p>
+                        <a href="sub4.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a href="web4/index.html" target="_blank">
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </li>
+                <li><img src="img/cgv.jpg">
+                    <div>
+                        <p>CGV</p>
+                        <a href="sub5.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a href="web5/index.html" target="_blank">
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </li>
+                <li><img src="img/굿네이버스.jpg">
+                    <div>
+                        <p>굿네이버스</p>
+                        <a href="sub6.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a href="web6/index.html" target="_blank">
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bg_mob">
+            <div class="web_wrap">
+                <div class="web_img img1"></div>
+                <div class="web_text">
+                    <p>서울시청년활동지원센터</p>
+                    <div class="button_wrap">
+                        <a href="sub2.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a>
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="web_wrap">
+                <div class="web_img img2"></div>
+                <div class="web_text">
+                    <p>스마트스토어</p>
+                    <div class="button_wrap">
+                        <a href="sub3.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a>
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="web_wrap">
+                <div class="web_img img3"></div>
+                <div class="web_text">
+                    <p>EnterpriseBlockchain</p>
+                    <div class="button_wrap">
+                        <a href="sub4.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a>
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="web_wrap">
+                <div class="web_img img4"></div>
+                <div class="web_text">
+                    <p>AboutGoogle</p>
+                    <div class="button_wrap">
+                        <a href="sub1.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="web_wrap">
+                <div class="web_img img5"></div>
+                <div class="web_text">
+                    <p>CGV</p>
+                    <div class="button_wrap">
+                        <a href="sub5.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a>
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="web_wrap">
+                <div class="web_img img6"></div>
+                <div class="web_text">
+                    <p>굿네이버스</p>
+                    <div class="button_wrap">
+                        <a href="sub6.html">
+                            <img src="img/detail.png">
+                            <img src="img/detail_hover.png">
+                        </a>
+                        <a>
+                            <img src="img/web.png">
+                            <img src="img/web_hover.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="arrow_right">
+            <img src="img/arrow_right.png" alt="">
+            <img src="img/arrow_right_hover.png">
+        </div>
+        <a href="#content4" class="arrow_down pointer">
+            <img src="img/arrow_down.png" alt="">
+            <img src="img/arrow_down_hover.png">
+        </a>
+    </div>
+    <div id="content4">
+        <h1>Other works</h1>
+        <div class="gallery_wrap">
+            <div class="gallery">
+                <div class="gallery_box banner">
+                    <p>Banner</p>
+                    <div class="round">
+                        <p>Click</p>
+                        <img src="img/arrow_right.png">
+                        <img src="img/arrow_right_hover.png">
+                    </div>
+                    <div class="round">
+                        <p>Click</p>
+                        <img src="img/arrow_right.png">
+                        <img src="img/arrow_right_hover.png">
+                    </div>
+                    <ul class="index">
+                        <li>
+                            <a href="img/banner1.jpg"><img src="img/banner1.jpg" />
+                                <div>
+                                    <p>문화 릴레이 티켓</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/banner2.jpg"><img src="img/banner2.jpg" />
+                                <div>
+                                    <p>문화 릴레이 티켓</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/banner3.jpg"><img src="img/banner3.jpg" />
+                                <div>
+                                    <p>눈높이 새학기 이벤트</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/banner4.jpg"><img src="img/banner4.jpg" />
+                                <div>
+                                    <p>눈높이 새학기 이벤트</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/banner5.jpg"><img src="img/banner5.jpg" />
+                                <div>
+                                    <p>가정의 달 기프트</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery_box card">
+                    <p>Card news</p>
+                    <div class="round">
+                        <p>Click</p>
+                        <img src="img/arrow_right.png">
+                        <img src="img/arrow_right_hover.png">
+                    </div>
+                    <div class="round">
+                        <p>Click</p>
+                        <img src="img/arrow_right.png">
+                        <img src="img/arrow_right_hover.png">
+                    </div>
+                    <ul class="index card_index">
+                        <li>
+                            <a href="img/card1_view.jpg"><img src="img/card1.jpg" />
+                                <div>
+                                    <p>리코리스의 홈가드닝</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/card2_view.jpg"><img src="img/card2.jpg" />
+                                <div>
+                                    <p>전자이력서 NFT-CV</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/card3_view.jpg"><img src="img/card3.jpg" />
+                                <div>
+                                    <p>청년활동지원센터</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/card4_view.jpg"><img src="img/card4.jpg" />
+                                <div>
+                                    <p>독도 in the 미디어</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/card5_view.jpg"><img src="img/card5.jpg" />
+                                <div>
+                                    <p>부산의 상징물</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery_box ci">
+                    <p>CI concept</p>
+                    <div class="round">
+                        <p>Click</p>
+                        <img src="img/arrow_right.png">
+                        <img src="img/arrow_right_hover.png">
+                    </div>
+                    <div class="round">
+                        <p>Click</p>
+                        <img src="img/arrow_right.png">
+                        <img src="img/arrow_right_hover.png">
+                    </div>
+                    <ul class="index">
+                        <li>
+                            <a href="img/logo1_view.jpg"><img src="img/logo1.jpg">
+                                <div>
+                                    <p>부산광역시 로고</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/logo2_view.jpg"><img src="img/logo2.jpg">
+                                <div>
+                                    <p>EnterpriseBlockchain 로고</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery_box etc">
+                    <p>Etc</p>
+                    <div class="round">
+                        <p>Click</p>
+                        <img src="img/arrow_right.png">
+                        <img src="img/arrow_right_hover.png">
+                    </div>
+                    <div class="round">
+                        <p>Click</p>
+                        <img src="img/arrow_right.png">
+                        <img src="img/arrow_right_hover.png">
+                    </div>
+                    <ul class="index">
+                        <li>
+                            <a href="img/leaflet_view.jpg"><img src="img/leaflet.jpg" />
+                                <div>
+                                    <p>리플렛 - 자기이해</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/character_view.jpg"><img src="img/character.jpg" />
+                                <div>
+                                    <p>캐릭터 - 둥이</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="img/namecard_view.jpg"><img src="img/namecard.jpg" />
+                                <div>
+                                    <p>명함 - EnterpriseBlockchain</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery_box none"></div>
+            </div>
+        </div>
+        <div class="gallery_mob">
+            <ul class="index_mob">
+                <li>
+                    <a href="img/banner1.jpg"><img src="img/banner1.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/banner2.jpg"><img src="img/banner2.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/banner3.jpg"><img src="img/banner3.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/banner4.jpg"><img src="img/banner4.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/banner5.jpg"><img src="img/banner5.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/card1_view.jpg"><img src="img/card1.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/card2_view.jpg"><img src="img/card2.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/card3_view.jpg"><img src="img/card3.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/card4_view.jpg"><img src="img/card4.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/card5_view.jpg"><img src="img/card5.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/logo1_view.jpg"><img src="img/logo1.jpg"></a>
+                </li>
+                <li>
+                    <a href="img/logo2_view.jpg"><img src="img/logo2.jpg"></a>
+                </li>
+                <li>
+                    <a href="img/leaflet_view.jpg"><img src="img/leaflet.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/character_view.jpg"><img src="img/character.jpg" /></a>
+                </li>
+                <li>
+                    <a href="img/namecard_view.jpg"><img src="img/namecard.jpg" /></a>
+                </li>
+            </ul>
+        </div>
+        <a href="#main" class="arrow_up pointer">
+            <img src="img/arrow_up.png">
+            <img src="img/arrow_up_hover.png">
+        </a>
+    </div>
+    <div class="response" style="width: calc(370 / 1024 * 100vw); height: calc(370 / 1024 * 100vw); display: none;">
+    </div>
+    <div class="pop"></div>
+</body>
+
+</html>

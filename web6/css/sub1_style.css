@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+@font-face {font-family: 'noto sans kr';
+    src: url("fonts/NOTOSANSKR-REGULAR.woff") format("woff");}
+
+/* 공통 */
+*{margin: 0; padding: 0; font-family: noto sans kr;}
+ul li{list-style: none;}
+body{overflow-x: hidden;}
+.inner{width: 1200px; margin: 0 auto;}
+
+/* 헤더 */
+#header{width: 100%; height: 86px;}
+#header>.inner{position: relative; z-index: 2;}
+.logo{padding-top: 43px; position: absolute;}
+.menu{right: 0; color: #b3c766; font-weight: bold; position: absolute;}
+#header>.inner:after{display: block; content: ""; clear: both;}
+.menu>li{float: left; padding-top: 43px; padding-left: 110px;}
+.menu>li:nth-child(1){padding-left: 0;}
+.menu>li:nth-child(1):after{display: inline-block; position: absolute; content: ""; border-bottom: 1px solid #b3c766; width: 62px; height: 1px; top: 70px; right: 490px;}
+.menu:after{display: block; content: ""; clear: both;}
+a{text-decoration-line: none; color: inherit;}
+
+/* 메인이미지 */
+#mainimg{width: 100%; height: 346px; position: absolute; z-index: 1;background-image: url(../sub1/mainimg.jpg); top: 0; background-repeat: no-repeat; background-size: cover;}
+
+.box1{width: 100%; height: 844px; margin-top: 276px;}
+.box1>.inner{text-align: center; position: relative;}
+.box1>.inner>h1{font-size: 57.36px; padding-top: 53px;}
+.box1>.inner>p{font-size: 24.01px; padding: 7px 0 40px 0;}
+.content_menu{width: 799px; height: 56px; position: absolute; left: 0; right: 0; margin: 0 auto;}
+.content_menu>li{float: left; width: 190px; height: 55px; text-align: center; line-height: 55px; background-color: #ebebeb; border-radius: 50px; margin-left: 12px; font-size: 24.23px;}
+.content_menu>li:nth-child(1){background-color: #8ba235; margin-left: 0; color: white;}
+.content_menu:after{display: block; content: ""; clear: both;}
+.letter{width: 1021px; height: 443px; position: absolute; left: 0; right: 0; margin: 0 auto; background-color: #b3c766; margin-top: 113.3px;}
+.letter_left{float: left; padding: 69px 0 0 76px; width: 229px; height: 304px;}
+.letter_left>img{width: 100%; height: 100%;}
+.letter_right{float: right; width: 597px; height: 304px; padding: 69px 76px 0 0;}
+.letter:after{display: block; content: ""; clear: both;}
+.letter_right>p{text-align: left; font-size: 23.25px; line-height: 40.84px;}
+.letter_right>p:nth-child(1){font-weight: bold;}
+.letter_right>p:nth-child(1):after{display: inline-block; position: absolute; content: ""; border-bottom: 1px solid #9fb15b; width: 596px; height: 1px; top: 108px; right: 77px;}
+.letter_right>p:nth-child(2):after{display: inline-block; position: absolute; content: ""; border-bottom: 1px solid #9fb15b; width: 596px; height: 1px; top: 149px; right: 77px;}
+.letter_right>p:nth-child(3):after{display: inline-block; position: absolute; content: ""; border-bottom: 1px solid #9fb15b; width: 596px; height: 1px; top: 191px; right: 77px;}
+.letter_right>div{padding-top: 119px; font-size: 20.61px; font-weight: bold;}
+.letter_right>div>div:nth-child(1){float: left; width: 287px; height: 57px; line-height: 57px; text-align: center; background-color: white;}
+.letter_right>div>div:nth-child(2){float: right; width: 287px; height: 57px; line-height: 57px; text-align: center; background-color: #685b55; color: white;}
+.letter_right>div:after{display: block; content: ""; clear: both;}
+.left_btn{position: absolute; width: 13px; height: 20px; top: 528px;}
+.left_btn>img{width: 100%; height: 100%;}
+.right_btn{position: absolute; width: 13px; height: 20px; top: 528px; right: 0;}
+.right_btn>img{width: 100%; height: 100%;}
+
+.box2{width: 100%; height: 971px; background-color: #e8e4de; text-align: center; position: relative;}
+.box2>h1{padding-top: 48px; font-size: 57.36px; line-height: 120%;}
+.box2>p{font-size: 24.01px; padding-top: 10px;}
+.iconset{width: 1197px; height: 113px; position: absolute; left: 0; right: 0; margin: 0 auto; padding-top: 53px;}
+.icon{float: left; width: 273px; height: 113px; margin-left: 33px; background-color: white; font-size: 20.05px;}
+.iconset:after{display: block; content: ""; clear: both;}
+.icon:nth-child(1){margin-left: 0;}
+.icon>img{padding: 20px 0 5px 0;}
+.icon:nth-child(3)>p{line-height: 160%;}
+.icon:nth-child(4)>img{padding-top: 16px;}
+.icon:nth-child(4)>p{line-height: 130%;}
+
+.column{width: 1373px; position: relative; margin: 0 auto; top: 320px; position: absolute; left: 0; right: 0;}
+.left_btnbox{width: 60px; height: 60px; position: absolute; top: 153px;}
+.left_btnbox>img{width: 100%; height: 100%;}
+.right_btnbox{width: 60px; height: 60px; position: absolute; right: 0; top: 153px;}
+.right_btnbox>img{width: 100%; height: 100%;}
+.box2_imgset{width: 1199px; position: absolute; left: 0; right: 0; margin: 0 auto;}
+.box2_imgset>div{float: left; padding-top: 63px; padding-left: 29px; text-align: left;}
+.box2_imgset>div>img{width: 380px; height: 232px;}
+.box2_imgset:after{display: block; content: ""; clear: both;}
+.box2_imgset>div:nth-child(1){padding-left: 0;}
+.box2_imgset>div>p{font-size: 17.29px; color: #82807c; padding: 20px 0 10px 13px;}
+.box2_imgset>div>h2{font-size: 24.59px; font-weight: normal;}
+
+.box2_banner{width: 1197px; height: 181px; background-color: #695d56; position: absolute; left: 0; right: 0; margin: 0 auto; bottom: 41px; text-align:  left;}
+.box2_banner>div:nth-child(1){float: left; color: white; padding: 20px 0 0 23px;}
+.box2_banner>div:nth-child(1)>h2{font-size: 32px; font-weight: normal; letter-spacing: -2px;}
+.box2_banner>div:nth-child(1)>p{font-size: 19px; letter-spacing: -1px;}
+.box2_banner>div:nth-child(1)>div{width: 277px; height: 57px; color: #8ba235; text-align: center; line-height: 57px; font-size: 19px; background-color: white; margin: 13px 0 0 16px; font-weight: bold;}
+.box2_banner>div:nth-child(2){float: right; width: 593px; height: 181px; background-image: url(../sub1/woman-1807533_1920.jpg); background-size: cover; background-position: 0 -25px;}
+.box2_banner:after{display: block; content: ""; clear: both;}
+
+/* 푸터 */
+#footer{width: 100%; height: 123px;}
+#footer>.inner>p{font-size: 14.33px; float: left; padding-top: 36px; line-height: 120%;}
+#footer>.inner>.footer_logo{float: right; padding-top: 43px;}
