@@ -204,14 +204,14 @@ body{overflow-x: hidden;}
     .road{font-size: 1.37rem;}
     .road>img{width: 5px; height: 8px;}
     .road>img{padding: calc(7 / 688 * 100%) calc(16 / 688 * 100%) 0;}
-    .explain_set{margin-top: calc(14 / 768 * 100%);}
+    .explain_set{margin-top: calc(14 / 768 * 100%); overflow: hidden;}
     .mainimg{width: 100%; height: 0; padding-bottom: calc(412 / 688 * 100%); background-image: url(../sub3/mainimg_m.jpg); float: none; background-size: cover;}
     .main_text{float: none; margin-left: 0; margin-top: calc(740.5 / 688 * 34 / 688 * 100%);}
     .main_text>h1{font-size: 5.1rem;}
     .main_text>p:nth-child(2){display: none;}
     .main_text>p:nth-child(3){display: block;}
     .main_text>p{font-size: 2.4rem; letter-spacing: -0.5px; padding-top: calc(30 / 688 * 100%);}
-    .sub_text{padding-top: calc(34 / 688 * 100%); overflow: hidden;}
+    .sub_text{padding-top: calc(34 / 688 * 100%);}
     .sub_text>ul>li{font-size: 2.5rem; margin-top: calc(34 / 688 * 100%); width: 25%;}
     .sub_list{width: 480px;}
     .sub_list>img {width: 11px; height: 19px;}
