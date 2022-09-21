@@ -222,6 +222,7 @@ body{overflow-x: hidden;}
     .sub_list>div>div>div{width: 6px; height: 6px; margin: calc(13 / 380 * 100%) calc(7 / 380 * 100%) 0 calc(2 / 380 * 100%);}
     .sub_list>div>div>p{font-size: 2.16rem;}
     .sub_text>ul>li:nth-child(3)>div>div>div>div>{margin: calc(13 / 380 * 100%) calc(7 / 380 * 100%) 0 calc(2 / 380 * 100%);}
+    
 
     /* sub_text 클릭효과 */
     .sub_text li.clicked {
@@ -309,6 +310,7 @@ body{overflow-x: hidden;}
     .sub_text>ul>li:nth-child(2)>.sub_list>img{width: calc(11 / 768 * 100vw); height: calc(19 / 768 * 100vw); padding: calc(10 / 768 * 100vw) calc(48 / 768 * 100vw) 0 0;}
     .sub_text>ul>li:nth-child(3)>.sub_list>img{width: calc(11 / 768 * 100vw); height: calc(19 / 768 * 100vw); padding: calc(10 / 768 * 100vw) calc(79 / 768 * 100vw) 0 0;}
     .sub_list>div>div{font-size: calc(22 / 768 * 100vw); margin-top: calc(34 / 768 * 100vw);}
+    .sub_list>div>div>p{font-size: calc(21.6 / 768 * 100vw);}
     .sub_list>div>div>div{width: calc(6 / 768 * 100vw); height: calc(6 / 768 * 100vw); margin: calc(13 / 768 * 100vw) calc(7 / 768 * 100vw) 0 calc(2 / 768 * 100vw);}
 
     /* sub_text 클릭효과 */
