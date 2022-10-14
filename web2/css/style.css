@@ -113,7 +113,7 @@ a.close{
 .box3>.inner>div>div>div{width: 112px; height: 34px; line-height: 34px; text-align: center; margin: 36px 0 0 28px; font-size: 14px;}
 .box3_left>div{background-color: white; color: #5c5678;}
 .box3_right>div{background-color: #575756; color: white;}
-.box3>.inner>div:nth-child(2){width: 36px; height: 36px; border-radius: 50px; background-color: #575756; text-align: center; line-height: 30px; position: absolute; right: -150px; bottom: -87px;}
+.box3>.inner>div:nth-child(2){width: 36px; height: 36px; border-radius: 50px; background-color: #575756; text-align: center; line-height: 30px; position: absolute; right: -7.8%; bottom: -87px;}
 .box3_left>div:nth-child(4){display: none;}
 .box3_right>div:nth-child(4){display: none;}
 .box3_left>p:nth-child(5){display: none;}
