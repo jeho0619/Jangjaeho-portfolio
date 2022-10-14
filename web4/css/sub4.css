@@ -1,13 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 @font-face {font-family: 'noto sans kr';
-    src: url("fonts/NOTOSANSKR-REGULAR.woff") format("woff");}
+    src: url("fonts/NotoSansKR-Thin.otf") format("opentype"); font-weight: 100;}
+
+@font-face {font-family: 'noto sans kr';
+    src: url("fonts/NotoSansKR-Light.otf") format("opentype"); font-weight: 200;}
+
+@font-face {font-family: 'noto sans kr';
+    src: url("fonts/NotoSansKR-Regular.otf") format("opentype"); font-weight: 400;}
+
+@font-face {font-family: 'noto sans kr';
+    src: url("fonts/NotoSansKR-Medium.otf") format("opentype"); font-weight: 600;}
+
+@font-face {font-family: 'noto sans kr';
+    src: url("fonts/NotoSansKR-Bold.otf") format("opentype"); font-weight: 700;}
+
+@font-face {font-family: 'noto sans kr';
+    src: url("fonts/NOTOSANSKR-BLACK.otf") format("opentype"); font-weight: 900;}
+
 
 @font-face {font-family: 'arita sans bold';
-    src: url("fonts/ARITASANS-BOLD.woff") format("woff");}
+    src: url("fonts/AritaSans-Bold.otf") format("opentype"); font-weight: 700;}
 
 @font-face {font-family: 'arita sans semibold';
-    src: url("fonts/ARITASANS-SEMIBOLD.woff") format("woff");}
+    src: url("fonts/AritaSans-SemiBold.otf") format("opentype"); font-weight: 600;}
 
 /* 공통 */
 *{padding: 0; margin: 0; font-family: 'Noto Sans KR', sans-serif;}
